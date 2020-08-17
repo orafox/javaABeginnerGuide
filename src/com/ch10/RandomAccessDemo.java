@@ -1,10 +1,28 @@
 package com.ch10;
 
+import java.io.Console;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
 public class RandomAccessDemo {
     public static void main(String[] args) {
+        String[] data1 = { "\u250C\u2500\u2500\u2500\u2500\u2500\u2510",
+                "\u2502Hello\u2502",
+                "\u2514\u2500\u2500\u2500\u2500\u2500\u2518" };
+        for (String s :data1
+             ) {
+//            Console co = System.console();
+//
+//            co.writer().println(s);
+            try {
+                System.out.println(s);
+                System.console().writer().println(s);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+
         double data[] = {19.4, 10.1, 123.54, 33.0, 87.9, 74.25};
         double d;
         try (RandomAccessFile raf = new RandomAccessFile("random.dat", "rw")) {
