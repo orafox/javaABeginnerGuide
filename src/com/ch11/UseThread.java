@@ -12,7 +12,7 @@ public class UseThread {
                 Thread.sleep(100);
 
             } catch (InterruptedException exception) {
-                System.out.println("main thread interrputed");
+                System.out.println("main 22 thread interrputed");
 
             }
 
