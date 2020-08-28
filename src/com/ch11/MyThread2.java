@@ -12,6 +12,7 @@ public class MyThread2 implements Runnable {
     public static MyThread2 createAndStart(String name) {
         MyThread2 myThrd = new MyThread2(name);
         myThrd.thrd.start();
+        System.out.println( "is alive " + myThrd.thrd.isAlive());
         return myThrd;
     }
 
@@ -21,6 +22,7 @@ public class MyThread2 implements Runnable {
         try {
             for (int count = 0; count < 10; count++) {
                 Thread.sleep(400);
+
                 System.out.println(" IN " + thrd.getName() + " , count is " + count);
             }
         } catch (InterruptedException exception) {
