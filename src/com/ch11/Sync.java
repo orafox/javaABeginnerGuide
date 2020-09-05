@@ -6,8 +6,9 @@ public class Sync {
         MyThreadSync mt1 = MyThreadSync.CreateAndStart("child #1", a);
         MyThreadSync mt2 = MyThreadSync.CreateAndStart("child #2", a);
         try {
-            mt1.thrd.join();
-            mt2.thrd.join();
+          mt1.thrd.join();
+            //mt2.thrd.join();
+            System.out.println("hh");
 
         } catch (InterruptedException exc) {
             System.out.println("Main thread interrputed");
