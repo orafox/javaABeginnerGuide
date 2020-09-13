@@ -10,8 +10,8 @@ public class TickTock {
             return;
         }
         System.out.print("Tick ");
-        state = "Ticked";
-        notify();
+        state = "ticked";
+       notify();
         try {
             while (!state.equals("tocked")) {
                 wait();
@@ -25,12 +25,12 @@ public class TickTock {
     synchronized void tock(boolean running) {
         if (!running) {
             state = "tocked";
-            notify();
+           notify();
             return;
         }
         System.out.println("Tock");
         state = "tocked";
-        notify();
+       notify();
         try {
             while (!state.equals("ticked")) {
                 wait();

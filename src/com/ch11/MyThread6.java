@@ -6,7 +6,7 @@ public class MyThread6 implements Runnable {
 
     public MyThread6(String name, TickTock tt) {
 
-        super();
+       // super();
         thrd = new Thread(this, name);
         ttob = tt;
 
