@@ -21,7 +21,7 @@ public class TrafficLightSimulator implements Runnable {
             try {
                 switch (tlc) {
                     case GREEN:
-                        Thread.sleep(1000);
+                        Thread.sleep(10000);
                         break;
                     case YELLOW:
                         Thread.sleep(2000);
@@ -48,7 +48,7 @@ public class TrafficLightSimulator implements Runnable {
                 break;
             case GREEN:
                 tlc = TrafficLightColor.YELLOW;
-                break;
+//                break;
         }
         changed = true;
         notify();
@@ -58,7 +58,7 @@ public class TrafficLightSimulator implements Runnable {
         try {
             while (!changed) {
                 wait();
-                changed = false;
+                changed = true;
             }
         } catch (InterruptedException exc) {
             System.out.println(exc);
