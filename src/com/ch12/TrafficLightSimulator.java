@@ -58,8 +58,9 @@ public class TrafficLightSimulator implements Runnable {
         try {
             while (!changed) {
                 wait();
-                changed = true;
+
             }
+            changed = false;
         } catch (InterruptedException exc) {
             System.out.println(exc);
         }
@@ -70,7 +71,7 @@ public class TrafficLightSimulator implements Runnable {
     }
 
     synchronized void cancel() {
-        stop =true;
+        stop = true;
     }
 
 }
