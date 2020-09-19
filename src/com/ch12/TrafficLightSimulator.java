@@ -21,7 +21,7 @@ public class TrafficLightSimulator implements Runnable {
             try {
                 switch (tlc) {
                     case GREEN:
-                        Thread.sleep(10000);
+                        Thread.sleep(1000);
                         break;
                     case YELLOW:
                         Thread.sleep(2000);
