@@ -3,6 +3,7 @@ package com.ch13;
 public class Gen<T> {
     T ob ;
 
+
     public Gen(T o) {
         this.ob = o;
 
