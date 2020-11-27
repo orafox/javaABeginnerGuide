@@ -2,6 +2,7 @@ package com.ch16;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class TFDemo implements ActionListener {
@@ -28,5 +29,30 @@ public class TFDemo implements ActionListener {
         jfrm.add(jbtnrev2);
         jfrm.setVisible(true);
 
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getActionCommand().equals("reverse")) {
+            String orgStr = jtf.getText();
+            String restStr = "";
+            for (int i = orgStr.length()-1; i >=0 ; i--) {
+                restStr += orgStr.charAt(i);
+            }
+            jtf.setText(restStr);
+
+        }else
+        {
+            jLabcont.setText("you pressed enter . txt is :"+jtf.getText());
+        }
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new TFDemo();
+            }
+        });
     }
 }
