@@ -40,10 +40,13 @@ public class TFDemo implements ActionListener {
                 restStr += orgStr.charAt(i);
             }
             jtf.setText(restStr);
+            System.out.println(e.getActionCommand());
+
 
         }else
         {
-            jLabcont.setText("you pressed enter . txt is :"+jtf.getText());
+            jLabcont.setText("you pressed enter . txt is :" + jtf.getText());
+            System.out.println(e.getActionCommand());
         }
     }
 
