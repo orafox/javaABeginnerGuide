@@ -22,9 +22,9 @@ public class ListDemo implements ListSelectionListener {
         jScrollPane.setPreferredSize(new Dimension(120, 90));
         jLabel = new JLabel("please chose a  name");
         jList.addListSelectionListener(this);
-       // jfrm.add(jScrollPane);
+        jfrm.add(jScrollPane);
         jfrm.add(jLabel);
-        jfrm.add(jList);
+       // jfrm.add(jList);
         jfrm.setVisible(true);
 
     }
